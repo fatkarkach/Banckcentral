@@ -1,0 +1,11 @@
+services:
+  shipDB:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ship
+    volumes:
+      - postgresVolume:/var/lib/postgresql/data
+volumes:
+  postgresVolume: {}
